@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Para Ti ❤️</title>
+<title>❤️ FELIZ PRIMER AÑO MI AMOR ❤️</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,248 +14,209 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
-overflow-x:hidden;
+background:
+linear-gradient(rgba(7,10,25,.80),rgba(10,10,25,.95)),
+url('foto2.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 color:white;
-background:#0c0d1c;
+overflow-x:hidden;
 }
 
-/* Fondo cinematográfico */
-.hero{
-height:100vh;
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
+.overlay{
+min-height:100vh;
+backdrop-filter:blur(6px);
+padding:50px 20px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
 text-align:center;
-padding:20px;
-background:
-linear-gradient(
-135deg,
-#090b16 0%,
-#24124f 35%,
-#421a73 65%,
-#12172d 100%
-);
-overflow:hidden;
-}
-
-/* Estrellas */
-.star{
-position:absolute;
-background:white;
-border-radius:50%;
-opacity:.7;
-animation:twinkle 3s infinite ease-in-out;
-}
-
-@keyframes twinkle{
-0%,100%{
-opacity:.2;
-transform:scale(1);
-}
-50%{
-opacity:1;
-transform:scale(1.8);
-}
-}
-
-/* Neblina */
-.hero::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at 20% 20%, rgba(123,47,247,.25), transparent 30%),
-radial-gradient(circle at 80% 40%, rgba(241,7,163,.15), transparent 30%);
-filter:blur(70px);
-}
-
-/* Caja principal */
-.card{
-position:relative;
-z-index:10;
-max-width:800px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.15);
-padding:45px;
-border-radius:30px;
-backdrop-filter:blur(20px);
-box-shadow:0 0 40px rgba(123,47,247,.25);
 }
 
 h1{
 font-family:'Playfair Display',serif;
-font-size:clamp(2.5rem,6vw,5rem);
+font-size:clamp(2.2rem,6vw,4.5rem);
 margin-bottom:15px;
+animation:fadeUp 1.4s ease;
+text-shadow:0 0 25px rgba(255,255,255,.15);
 }
 
-.subtitle{
+.subtitulo{
 font-size:1.2rem;
-opacity:.8;
-margin-bottom:30px;
+opacity:.92;
+margin-bottom:50px;
+animation:fadeUp 1.8s ease;
+}
+
+.hero img{
+width:300px;
+max-width:90%;
+border-radius:28px;
+box-shadow:0 20px 50px rgba(0,0,0,.5);
+animation:flotar 5s ease-in-out infinite;
+margin-bottom:50px;
+}
+
+.carta{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+padding:40px;
+border-radius:35px;
+backdrop-filter:blur(20px);
+font-size:1.18rem;
+line-height:1.9;
+text-align:left;
+box-shadow:0 0 40px rgba(255,255,255,.05);
+}
+
+.carta h2{
+text-align:center;
+margin-bottom:25px;
 }
 
 #texto{
-font-size:1.15rem;
-line-height:1.9;
-min-height:140px;
+white-space:pre-wrap;
+min-height:200px;
 }
 
-button{
-margin-top:30px;
-padding:15px 35px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-font-size:1rem;
-font-weight:600;
-background:linear-gradient(45deg,#7b2ff7,#f107a3);
-color:white;
-transition:.4s;
+.galeria{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-button:hover{
-transform:scale(1.06);
-}
-
-/* Galería */
-.gallery{
-padding:80px 20px;
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-background:#0d1021;
-}
-
-.polaroid{
-background:white;
-padding:12px;
-border-radius:10px;
-width:250px;
-transform:rotate(-2deg);
-box-shadow:0 10px 20px rgba(0,0,0,.4);
-transition:.4s;
-}
-
-.polaroid:hover{
-transform:scale(1.04);
-}
-
-.polaroid img{
+.galeria img{
 width:100%;
-height:300px;
+height:420px;
 object-fit:cover;
-border-radius:6px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.35s;
 }
 
-.polaroid p{
-color:#222;
-margin-top:10px;
-font-weight:600;
-text-align:center;
+.galeria img:hover{
+transform:scale(1.03);
 }
 
-/* Corazones suaves */
-.heart{
+.final{
+margin-top:70px;
+padding:40px;
+border-radius:35px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+font-size:1.2rem;
+line-height:1.8;
+box-shadow:0 0 30px rgba(255,255,255,.06);
+}
+
+.corazon{
 position:fixed;
-bottom:-50px;
-font-size:18px;
-opacity:.3;
-animation:float linear infinite;
+bottom:-20px;
+opacity:.4;
+animation:subir linear infinite;
 pointer-events:none;
 }
 
-@keyframes float{
+@keyframes subir{
+from{
+transform:translateY(0);
+opacity:.7;
+}
 to{
 transform:translateY(-120vh);
 opacity:0;
 }
 }
 
-/* Mensaje sorpresa */
-.final{
-text-align:center;
-padding:100px 20px;
-background:linear-gradient(#0d1021,#180f35);
+@keyframes flotar{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
 }
 
-.final h2{
-font-size:3rem;
-margin-bottom:20px;
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 </head>
+
 <body>
 
-<section class="hero">
-<div class="card">
+<div class="overlay">
 
-<h1>Para el amor de mi vida ❤️</h1>
+<div class="container">
 
-<p class="subtitle">
-Un pequeño rincón hecho para ti
+<h1>❤️ FELIZ PRIMER AÑO MI AMOR ❤️</h1>
+
+<p class="subtitulo">
+Un sitio web dedicado al amor de mi vida.<br>
+En conmemoración de nuestro 1er añito juntos ❤️
 </p>
 
+<div class="hero">
+<img src="foto1.jpg" alt="Nosotros">
+</div>
+
+<div class="carta">
+<h2>Una carta para ti 💌</h2>
 <p id="texto"></p>
-
-<button onclick="mostrarSorpresa()">
-Abrir mi corazón ❤️
-</button>
-
 </div>
-</section>
 
-<section class="gallery">
-
-<div class="polaroid">
+<div class="galeria">
 <img src="foto1.jpg">
-<p>Nuestro momento ❤️</p>
-</div>
-
-<div class="polaroid">
 <img src="foto2.jpg">
-<p>Mi lugar favorito eres tú</p>
-</div>
-
-<div class="polaroid">
 <img src="foto3.jpg">
-<p>Gracias por existir</p>
+<img src="foto4.jpg">
 </div>
 
-</section>
+<div class="final">
+<h2 style="margin-bottom:20px;">
+Para terminar... ❤️
+</h2>
 
-<section class="final" id="final">
-<h2>Te amo muchísimo ❤️</h2>
-<p id="mensajeFinal"></p>
-</section>
+<p>
+Ojalá pudieras verte con mis ojos por un momento, que indagues mi mente,
+para que confirmes que solo existes tú en mi ser.
 
-<audio autoplay loop>
-<source src="musica.mp3">
-</audio>
+Te amo mucho, amor ❤️
+</p>
+</div>
+
+</div>
+</div>
 
 <script>
 
-/* Carta escribiéndose sola */
-const texto = `
-No sabía cómo explicarte lo importante que eres para mí,
-así que hice algo distinto...
+const mensaje = `Gracias por permitirme ser parte de tu vida, por elegirme a mí entre tantos, de ser yo quien ría contigo y seque tus lágrimas.
 
-Gracias por cada risa, cada abrazo, cada momento.
-Contigo aprendí que el amor también se siente como hogar.
+Tengo toda una vida para complacerte, quererte y servirte...
 
-Y si algún día dudas de cuánto te amo...
-vuelve aquí ❤️
-`;
+y otra vida que, cuando no esté aquí, te amará con toda el alma desde el más allá. ❤️`;
 
 let i = 0;
 
 function escribir(){
-if(i < texto.length){
-document.getElementById("texto").innerHTML += texto.charAt(i);
+if(i < mensaje.length){
+document.getElementById("texto").innerHTML += mensaje.charAt(i);
 i++;
 setTimeout(escribir,40);
 }
@@ -264,41 +224,18 @@ setTimeout(escribir,40);
 
 escribir();
 
-/* Estrellas */
-for(let i=0;i<120;i++){
-let s=document.createElement("div");
-s.className="star";
+/* corazones suaves */
 
-let size=Math.random()*3;
-
-s.style.width=size+"px";
-s.style.height=size+"px";
-s.style.left=Math.random()*100+"vw";
-s.style.top=Math.random()*100+"vh";
-s.style.animationDuration=(2+Math.random()*4)+"s";
-
-document.body.appendChild(s);
+for(let i=0;i<35;i++){
+const c=document.createElement("div");
+c.className="corazon";
+c.innerHTML="❤️";
+c.style.left=Math.random()*100+"vw";
+c.style.animationDuration=(5+Math.random()*7)+"s";
+c.style.fontSize=(15+Math.random()*18)+"px";
+document.body.appendChild(c);
 }
 
-/* Corazones */
-for(let i=0;i<25;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=
-(5+Math.random()*8)+"s";
-
-document.body.appendChild(h);
-}
-
-/* Botón sorpresa */
-function mostrarSorpresa(){
-document.getElementById("mensajeFinal").innerHTML=
-"Gracias por existir. Eres de las cosas más bonitas que me han pasado. ❤️";
-document.getElementById("final")
-.scrollIntoView({behavior:"smooth"});
-}
 </script>
 
 </body>
